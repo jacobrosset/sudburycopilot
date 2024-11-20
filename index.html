@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Prompt Adventure</h1>
+
+        <!-- Start Section -->
+        <div id="start-section">
+            <p class="funny-note">"The only thing more fun than role playing as a child is role playing as an adult ;)"</p>
+            <button id="startBtn">Get Started</button>
+        </div>
+
+        <!-- Challenge 1: Role Playing -->
+        <div id="challenge1" class="hidden">
+            <h2>Challenge 1: Role Playing</h2>
+            <p>"The only thing more fun than role playing as a child is role playing as an adult ;)"</p>
+
+            <div id="prompt1-section" class="hidden">
+                <h3>Generate the First Response</h3>
+                <p>You are a 
+                    <select id="role1">
+                        <option value="teacher">teacher</option>
+                        <option value="climate scientist">climate scientist</option>
+                        <option value="storyteller">storyteller</option>
+                    </select>
+                    writing for city council. Explain renewable energy in a professional tone.
+                </p>
+                <button id="generateResponse1">Generate First Response</button>
+                <pre id="response1" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="prompt2-section" class="hidden">
+                <h3>Generate the Second Response</h3>
+                <p>You are a 
+                    <select id="role2"></select>
+                    writing for city council. Explain renewable energy in a professional tone.
+                </p>
+                <button id="generateResponse2">Generate Second Response</button>
+                <pre id="response2" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="custom-prompt-section1" class="hidden">
+                <h3>Create Your Own Prompt</h3>
+                <textarea id="customPrompt1" placeholder="Write your own prompt here..." rows="4"></textarea>
+                <p class="note">Custom responses are limited to 60 words.</p>
+                <button id="generateCustomResponse1">Generate Custom Response</button>
+                <pre id="customResponse1" class="response-box">Your custom response will appear here...</pre>
+            </div>
+
+            <button id="nextChallenge1" class="hidden">Next Challenge</button>
+        </div>
+
+        <!-- Challenge 2: Choosing Your Audience -->
+        <div id="challenge2" class="hidden">
+            <h2>Challenge 2: Choosing Your Audience</h2>
+            <p>"You wouldn't speak with your mother the same way you speak with a stranger on the street."</p>
+
+            <div id="audience1-section" class="hidden">
+                <h3>Generate the First Response</h3>
+                <p>You are a teacher explaining renewable energy to
+                    <select id="audience1">
+                        <option value="city council">city council</option>
+                        <option value="5-year-old children">5-year-old children</option>
+                    </select>.
+                </p>
+                <button id="generateAudienceResponse1">Generate First Response</button>
+                <pre id="audienceResponse1" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="audience2-section" class="hidden">
+                <h3>Generate the Second Response</h3>
+                <p>You are a teacher explaining renewable energy to
+                    <select id="audience2"></select>.
+                </p>
+                <button id="generateAudienceResponse2">Generate Second Response</button>
+                <pre id="audienceResponse2" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="custom-prompt-section2" class="hidden">
+                <h3>Create Your Own Prompt</h3>
+                <textarea id="customPrompt2" placeholder="Write your own prompt here..." rows="4"></textarea>
+                <p class="note">Custom responses are limited to 60 words.</p>
+                <button id="generateCustomResponse2">Generate Custom Response</button>
+                <pre id="customResponse2" class="response-box">Your custom response will appear here...</pre>
+            </div>
+
+            <button id="nextChallenge2" class="hidden">Next Challenge</button>
+        </div>
+
+        <!-- Challenge 3: Setting the Tone -->
+        <div id="challenge3" class="hidden">
+            <h2>Challenge 3: Setting the Tone</h2>
+            <p>"Like a good perm, you can live your life with business in the front and party in the back, but not when prompting AI. Pick one."</p>
+
+            <div id="tone1-section" class="hidden">
+                <h3>Generate the First Response</h3>
+                <p>You are a climate scientist explaining renewable energy in a 
+                    <select id="tone1">
+                        <option value="professional tone">professional tone</option>
+                        <option value="engaging tone">engaging tone</option>
+                    </select>.
+                </p>
+                <button id="generateToneResponse1">Generate First Response</button>
+                <pre id="toneResponse1" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="tone2-section" class="hidden">
+                <h3>Generate the Second Response</h3>
+                <p>You are a climate scientist explaining renewable energy in a 
+                    <select id="tone2"></select>.
+                </p>
+                <button id="generateToneResponse2">Generate Second Response</button>
+                <pre id="toneResponse2" class="response-box">AI Response will appear here...</pre>
+            </div>
+
+            <div id="custom-prompt-section3" class="hidden">
+                <h3>Create Your Own Prompt</h3>
+                <textarea id="customPrompt3" placeholder="Write your own prompt here..." rows="4"></textarea>
+                <p class="note">Custom responses are limited to 60 words.</p>
+                <button id="generateCustomResponse3">Generate Custom Response</button>
+                <pre id="customResponse3" class="response-box">Your custom response will appear here...</pre>
+            </div>
+
+            <button id="nextChallenge3" class="hidden">Next Challenge</button>
+        </div>
+
+        <!-- Challenge 4: Simplify Complexity -->
+        <div id="challenge4" class="hidden">
+            <h2>Challenge 4: Simplify Complexity</h2>
+            <p>"Ask the most complicated question you can think of and finish the prompt with '...put it simply.'"</p>
+
+            <textarea id="complexPrompt" placeholder="Write your complex question here..." rows="4"></textarea>
+            <button id="generateComplexResponse">Generate Response</button>
+            <pre id="complexResponse" class="response-box">Your response will appear here...</pre>
+
+            <button id="restartBtn" class="hidden">Restart Adventure</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="randomizeTopic.js"></script>
+</body>
+</html>
