@@ -5,7 +5,7 @@ const axios = require('axios');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5000;  // Port where the server will run
+const port = process.env.PORT || 5000;  // Port for the server
 
 // OpenAI API Key
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -20,6 +20,11 @@ if (!OPENAI_API_KEY) {
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+
+// Health Check Endpoint for Render
+app.get('/', (req, res) => {
+    res.status(200).send("Server is running");
+});
 
 // Serve static files from the public folder
 app.use(express.static('public'));
@@ -71,5 +76,5 @@ app.post('/api/completions', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 });
