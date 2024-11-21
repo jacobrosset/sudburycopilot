@@ -13,7 +13,7 @@ const hideSection = (section) => {
 async function fetchAIResponse(prompt, maxTokens = 60) {
     console.log(`Fetching AI response for prompt: "${prompt}"`);
     try {
-        const response = await fetch("http://localhost:5000/api/completions", {
+        const response = await fetch("https://copilot-game.onrender.com/api/completions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt, max_tokens: maxTokens }),
